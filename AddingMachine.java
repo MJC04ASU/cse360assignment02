@@ -1,5 +1,5 @@
 package cse360assignment02;
-
+  //https://github.com/MJC04ASU/cse360assignment02/edit/main/AddingMachine.java
 public class AddingMachine {
   private int total;
   private String totalMachine = new String("0");
@@ -38,12 +38,20 @@ public class AddingMachine {
     
     AddingMachine myCalculator = new AddingMachine();
 
-    myCalculator.add (4);
-    myCalculator.subtract (2);
-    myCalculator.add (5);
-    
+    myCalculator.add (4);  //0 + 4
+    myCalculator.subtract (2);  //0 + 4 - 2
+    myCalculator.add (5);  //0 + 4 - 2 + 5
     System.out.println(myCalculator);
-    System.out.println(myCalculator.getTotal());
+    System.out.println(myCalculator.getTotal()); // 7
+    
+    myCalculator.clear();
+    
+    myCalculator.add (9);  //0 + 9
+    myCalculator.subtract (1);  // 0 + 9 - 1
+    myCalculator.add (3);  //0 + 9 - 1 + 3
+    System.out.println(myCalculator);
+    System.out.println(myCalculator.getTotal());  // 11
+    
   }
     
 }
