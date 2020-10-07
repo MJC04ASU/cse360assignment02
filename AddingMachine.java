@@ -14,14 +14,14 @@ public class AddingMachine {
   
   public void add (int value) {
     total += value;    //add the new value to the running total
-    totalMachine = totalMaching.concat(" + ");   //add the '+' character to the end of the string.
-    totalMachine = totalMaching.concat(Integer.toString(value));    //add the value to the end of the string.
+    totalMachine = totalMachine.concat(" + ");   //add the '+' character to the end of the string.
+    totalMachine = totalMachine.concat(Integer.toString(value));    //add the value to the end of the string.
   }
 
   public void subtract (int value) {
     total -= value;
-    totalMachine = totalMaching.concat(" - ");    //add the '-' character to the end of the string.
-    totalMachine = totalMaching.concat(Integer.toString(value));    //add the value to the end of the string.
+    totalMachine = totalMachine.concat(" - ");    //add the '-' character to the end of the string.
+    totalMachine = totalMachine.concat(Integer.toString(value));    //add the value to the end of the string.
   }
 
   public String toString () {
@@ -30,7 +30,20 @@ public class AddingMachine {
 
   public void clear() {
     total = 0;    //reset the addingMaching
-    totalMaching = new String("0"); //reset the totalMaching string
+    totalMachine = new String("0"); //reset the totalMaching string
     
   }
+
+  public static void main(String[] args) {
+    
+    AddingMachine myCalculator = new AddingMachine();
+
+    myCalculator.add (4);
+    myCalculator.subtract (2);
+    myCalculator.add (5);
+    
+    System.out.println(myCalculator);
+    System.out.println(myCalculator.getTotal());
+  }
+    
 }
